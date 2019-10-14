@@ -41,16 +41,16 @@
     (pad 2 thru_hole circle (at -3.5 0 ,(+ 90 rotation)) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask F.SilkS) ,net-neg)))
 
 
-(define (connector-shrouded x y rotation)
+(define (connector-shrouded x y rotation r v)
   `(module connector-shrouded (layer F.Cu) (tedit 200000)
 	  (at ,x ,y ,rotation)
     (descr "PLATED THROUGH HOLE - 2X5 SHROUDED HEADER")
     (tags "PLATED THROUGH HOLE - 2X5 SHROUDED HEADER")
 	  (attr virtual)
-	  (fp_text reference >NAME (at 5.207 -5.08 90) (layer F.SilkS)
+	  (fp_text reference ,r (at 5.207 -5.08) (layer F.SilkS)
 	    (effects (font (size 0.6096 0.6096) (thickness 0.127)))
 	  )
-	  (fp_text value >VALUE (at -5.08 -5.08 90) (layer F.SilkS)
+	  (fp_text value ,v (at -5.08 -5.08) (layer F.SilkS)
 	    (effects (font (size 0.6096 0.6096) (thickness 0.127)))
 	  )
 	  (fp_line (start -1.524 -4.826) (end -1.016 -4.826) (layer Dwgs.User) (width 0.06604))
@@ -117,16 +117,26 @@
 	  (fp_line (start -3.39852 -8.99922) (end -3.39852 -2.19964) (layer Dwgs.User) (width 0.2032))
 	  (fp_line (start -3.39852 8.99922) (end -3.39852 2.19964) (layer Dwgs.User) (width 0.2032))
 	  (fp_line (start -2.81178 -5.715) (end -2.81178 -4.445) (layer F.SilkS) (width 0.2032))
-	  (pad 1 thru_hole circle (at -1.27 -5.08) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))
-	  (pad 2 thru_hole circle (at 1.27 -5.08) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))
-	  (pad 3 thru_hole circle (at -1.27 -2.54) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))
-	  (pad 4 thru_hole circle (at 1.27 -2.54) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))
-	  (pad 5 thru_hole circle (at -1.27 0) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))
-	  (pad 6 thru_hole circle (at 1.27 0) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))
-	  (pad 7 thru_hole circle (at -1.27 2.54) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))
-	  (pad 8 thru_hole circle (at 1.27 2.54) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))
-	  (pad 9 thru_hole circle (at -1.27 5.08) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))
-	  (pad 10 thru_hole circle (at 1.27 5.08) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask) (solder_mask_margin 0.1016))))
+	  (pad 1 thru_hole circle (at -1.27 -5.08) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 1 N-row-0) (solder_mask_margin 0.1016))
+	  (pad 2 thru_hole circle (at 1.27 -5.08) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 8 N-col-3) (solder_mask_margin 0.1016))
+	  (pad 3 thru_hole circle (at -1.27 -2.54) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 2 N-row-1) (solder_mask_margin 0.1016))
+	  (pad 4 thru_hole circle (at 1.27 -2.54) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 7 N-col-2) (solder_mask_margin 0.1016))
+	  (pad 5 thru_hole circle (at -1.27 0) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 3 N-row-2) (solder_mask_margin 0.1016))
+	  (pad 6 thru_hole circle (at 1.27 0) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 6 N-col-1) (solder_mask_margin 0.1016))
+	  (pad 7 thru_hole circle (at -1.27 2.54) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 4 N-row-3) (solder_mask_margin 0.1016))
+	  (pad 8 thru_hole circle (at 1.27 2.54) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 5 N-col-0) (solder_mask_margin 0.1016))
+	  (pad 9 thru_hole circle (at -1.27 5.08) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (net 9 N-col-4) (solder_mask_margin 0.1016))
+	  (pad 10 thru_hole circle (at 1.27 5.08) (size 1.8796 1.8796) (drill 1.016) (layers *.Cu *.Mask)
+      (solder_mask_margin 0.1016))))
 
 (define nets
   `((net 0 "")
@@ -154,18 +164,18 @@
             (list 'add_net (last n)))))
 
 (define (switch row col)
-  (let* ([x (* (+ 1 col) spacing)]
-         [y (+ 40 (* row spacing))]
+  (let* ([x (+ 38.1 (* col spacing))]
+         [y (+ 57.15 (* row spacing))]
          [label (format "sw~a:~a" col row)]
          [rotation 0]
          [diode (+ row (* col 4))]
          [diode-net `(net ,(+ 10 diode) ,(string->symbol (format "N-diode-~s" diode)))]
          [column-net `(net ,(+ 5 col) ,(string->symbol (format "N-col-~s" col)))])
-    (switch-module x y rotation label column-net diode-net)))
+    (switch-module x y rotation label diode-net column-net)))
 
 (define (diode row col)
-  (let* ([x (+ 9 (* (+ 1 col) spacing))]
-         [y (+ 40 (* row spacing))]
+  (let* ([x (+ 46.1 (* col spacing))]
+         [y (+ 57.15 (* row spacing))]
          [label (format "d~a:~a" col row)]
          [rotation 0]
          [diode (+ row (* col 4))]
@@ -179,30 +189,35 @@
              [row (in-range rows)])
     (list (switch row col) (diode row col))))
 
-(define edge-cuts
-  (for/list [(s '([10  10] [110 10]  [110 110] [10 110]))
-             (e '([110 10] [110 110] [10  110] [10 10]))]
+(define straight-edge-cuts
+  (for/list [(s '([122   28] [125  31] [27.5  31] [122   125]))
+             (e '([ 30.5 28] [125 122] [27.5 122] [ 30.5 125]))]
     `(gr_line (start ,@s) (end ,@e) (angle 90) (layer Edge.Cuts) (width 0.3))))
+
+(define arc-edge-cuts
+  (for/list [(s '([122 31] [30.5 31] [122 122] [30.5  122]))
+             (e '([125 31] [30.5 28] [122 125] [27.5  122]))]
+    `(gr_arc (start ,@s) (end ,@e) (angle -90) (layer Edge.Cuts) (width 0.3))))
 
 (define board
   (apply append nets
 								(list (net-class nets))
-								(list (connector-shrouded (* spacing 4.5) 20 90))
-							  edge-cuts
-                switches+diodes
-                ))
+								(list (connector-shrouded 113.5 38.5 270 "J2" "CONN_05X2SHD"))
+							  straight-edge-cuts
+							  arc-edge-cuts
+                switches+diodes))
 
-(define (write-placement filename)
-  (when (file-exists? filename) (delete-file filename))
-  (call-with-output-file filename
+(define (write-placement pcbname headerfile tracesfile)
+  (when (file-exists? pcbname) (delete-file pcbname))
+  (call-with-output-file pcbname
     (λ (op)
-      (display (call-with-input-file "header.rktd"
+      (display (call-with-input-file headerfile
                  (curry read-string 9999)) op)
       (display "\n" op)
       (for ([f board])
         (pretty-print f op 1))
-      (display (call-with-input-file "traces.rktd"
+      (display (call-with-input-file tracesfile
                  (curry read-string 999999)) op)
       (display ")" op))))
 
-(write-placement "giggle.kicad_pcb")
+(write-placement "giggle.kicad_pcb" "header-side.rktd" "traces-side.rktd")
