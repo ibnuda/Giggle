@@ -101,26 +101,67 @@
 (net 7 N-col-2)
 (net 8 N-col-3)
 (net 9 N-col-4)
-(net 10 N-diode-0)
-(net 11 N-diode-1)
-(net 12 N-diode-2)
-(net 13 N-diode-3)
-(net 14 N-diode-4)
-(net 15 N-diode-5)
-(net 16 N-diode-6)
-(net 17 N-diode-7)
-(net 18 N-diode-8)
-(net 19 N-diode-9)
-(net 20 N-diode-10)
-(net 21 N-diode-11)
-(net 22 N-diode-12)
-(net 23 N-diode-13)
-(net 24 N-diode-14)
-(net 25 N-diode-15)
-(net 26 N-diode-16)
-(net 27 N-diode-17)
-(net 28 N-diode-18)
-(net 29 N-diode-19)
+(net 10 N-col-5)
+(net 11 N-col-6)
+(net 12 N-col-7)
+(net 13 N-col-8)
+(net 14 N-col-9)
+(net 15 N-col-10)
+(net 16 N-col-11)
+(net 17 N-col-12)
+(net 18 N-col-13)
+(net 19 N-diode-0)
+(net 20 N-diode-1)
+(net 21 N-diode-2)
+(net 22 N-diode-3)
+(net 23 N-diode-4)
+(net 24 N-diode-5)
+(net 25 N-diode-6)
+(net 26 N-diode-7)
+(net 27 N-diode-8)
+(net 28 N-diode-9)
+(net 29 N-diode-10)
+(net 30 N-diode-11)
+(net 31 N-diode-12)
+(net 32 N-diode-13)
+(net 33 N-diode-14)
+(net 34 N-diode-15)
+(net 35 N-diode-16)
+(net 36 N-diode-17)
+(net 37 N-diode-18)
+(net 38 N-diode-19)
+(net 39 N-diode-20)
+(net 40 N-diode-21)
+(net 41 N-diode-22)
+(net 42 N-diode-23)
+(net 43 N-diode-24)
+(net 44 N-diode-25)
+(net 45 N-diode-26)
+(net 46 N-diode-27)
+(net 47 N-diode-28)
+(net 48 N-diode-29)
+(net 49 N-diode-30)
+(net 50 N-diode-31)
+(net 51 N-diode-32)
+(net 52 N-diode-33)
+(net 53 N-diode-34)
+(net 54 N-diode-35)
+(net 55 N-diode-36)
+(net 56 N-diode-37)
+(net 57 N-diode-38)
+(net 58 N-diode-39)
+(net 59 N-diode-40)
+(net 60 N-diode-41)
+(net 61 N-diode-42)
+(net 62 N-diode-43)
+(net 63 N-diode-44)
+(net 64 N-diode-45)
+(net 65 N-diode-46)
+(net 66 N-diode-47)
+(net 67 N-diode-48)
+(net 68 N-diode-49)
+(net 69 N-diode-50)
+(net 70 N-diode-51)
 (net_class
  Default
  "This is the default net class."
@@ -140,6 +181,15 @@
  (add_net N-col-2)
  (add_net N-col-3)
  (add_net N-col-4)
+ (add_net N-col-5)
+ (add_net N-col-6)
+ (add_net N-col-7)
+ (add_net N-col-8)
+ (add_net N-col-9)
+ (add_net N-col-10)
+ (add_net N-col-11)
+ (add_net N-col-12)
+ (add_net N-col-13)
  (add_net N-diode-0)
  (add_net N-diode-1)
  (add_net N-diode-2)
@@ -159,7 +209,39 @@
  (add_net N-diode-16)
  (add_net N-diode-17)
  (add_net N-diode-18)
- (add_net N-diode-19))
+ (add_net N-diode-19)
+ (add_net N-diode-20)
+ (add_net N-diode-21)
+ (add_net N-diode-22)
+ (add_net N-diode-23)
+ (add_net N-diode-24)
+ (add_net N-diode-25)
+ (add_net N-diode-26)
+ (add_net N-diode-27)
+ (add_net N-diode-28)
+ (add_net N-diode-29)
+ (add_net N-diode-30)
+ (add_net N-diode-31)
+ (add_net N-diode-32)
+ (add_net N-diode-33)
+ (add_net N-diode-34)
+ (add_net N-diode-35)
+ (add_net N-diode-36)
+ (add_net N-diode-37)
+ (add_net N-diode-38)
+ (add_net N-diode-39)
+ (add_net N-diode-40)
+ (add_net N-diode-41)
+ (add_net N-diode-42)
+ (add_net N-diode-43)
+ (add_net N-diode-44)
+ (add_net N-diode-45)
+ (add_net N-diode-46)
+ (add_net N-diode-47)
+ (add_net N-diode-48)
+ (add_net N-diode-49)
+ (add_net N-diode-50)
+ (add_net N-diode-51))
 (module connector-shrouded (layer F.Cu)
   (tedit 200000)
   (at 113.5 38.5 270)
@@ -656,7 +738,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 10 N-diode-0))
+   (net 19 N-diode-0))
   (pad
    1
    thru_hole
@@ -665,7 +747,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 10 N-diode-0))
+   (net 19 N-diode-0))
   (pad
    2
    thru_hole
@@ -729,7 +811,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 10 N-diode-0))
+   (net 19 N-diode-0))
   (pad
    2
    thru_hole
@@ -765,7 +847,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 11 N-diode-1))
+   (net 20 N-diode-1))
   (pad
    1
    thru_hole
@@ -774,7 +856,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 11 N-diode-1))
+   (net 20 N-diode-1))
   (pad
    2
    thru_hole
@@ -838,7 +920,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 11 N-diode-1))
+   (net 20 N-diode-1))
   (pad
    2
    thru_hole
@@ -874,7 +956,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 12 N-diode-2))
+   (net 21 N-diode-2))
   (pad
    1
    thru_hole
@@ -883,7 +965,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 12 N-diode-2))
+   (net 21 N-diode-2))
   (pad
    2
    thru_hole
@@ -947,7 +1029,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 12 N-diode-2))
+   (net 21 N-diode-2))
   (pad
    2
    thru_hole
@@ -983,7 +1065,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 13 N-diode-3))
+   (net 22 N-diode-3))
   (pad
    1
    thru_hole
@@ -992,7 +1074,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 13 N-diode-3))
+   (net 22 N-diode-3))
   (pad
    2
    thru_hole
@@ -1056,7 +1138,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 13 N-diode-3))
+   (net 22 N-diode-3))
   (pad
    2
    thru_hole
@@ -1092,7 +1174,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 14 N-diode-4))
+   (net 23 N-diode-4))
   (pad
    1
    thru_hole
@@ -1101,7 +1183,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 14 N-diode-4))
+   (net 23 N-diode-4))
   (pad
    2
    thru_hole
@@ -1165,7 +1247,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 14 N-diode-4))
+   (net 23 N-diode-4))
   (pad
    2
    thru_hole
@@ -1201,7 +1283,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 15 N-diode-5))
+   (net 24 N-diode-5))
   (pad
    1
    thru_hole
@@ -1210,7 +1292,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 15 N-diode-5))
+   (net 24 N-diode-5))
   (pad
    2
    thru_hole
@@ -1274,7 +1356,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 15 N-diode-5))
+   (net 24 N-diode-5))
   (pad
    2
    thru_hole
@@ -1310,7 +1392,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 16 N-diode-6))
+   (net 25 N-diode-6))
   (pad
    1
    thru_hole
@@ -1319,7 +1401,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 16 N-diode-6))
+   (net 25 N-diode-6))
   (pad
    2
    thru_hole
@@ -1383,7 +1465,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 16 N-diode-6))
+   (net 25 N-diode-6))
   (pad
    2
    thru_hole
@@ -1419,7 +1501,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 17 N-diode-7))
+   (net 26 N-diode-7))
   (pad
    1
    thru_hole
@@ -1428,7 +1510,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 17 N-diode-7))
+   (net 26 N-diode-7))
   (pad
    2
    thru_hole
@@ -1492,7 +1574,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 17 N-diode-7))
+   (net 26 N-diode-7))
   (pad
    2
    thru_hole
@@ -1528,7 +1610,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 18 N-diode-8))
+   (net 27 N-diode-8))
   (pad
    1
    thru_hole
@@ -1537,7 +1619,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 18 N-diode-8))
+   (net 27 N-diode-8))
   (pad
    2
    thru_hole
@@ -1601,7 +1683,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 18 N-diode-8))
+   (net 27 N-diode-8))
   (pad
    2
    thru_hole
@@ -1637,7 +1719,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 19 N-diode-9))
+   (net 28 N-diode-9))
   (pad
    1
    thru_hole
@@ -1646,7 +1728,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 19 N-diode-9))
+   (net 28 N-diode-9))
   (pad
    2
    thru_hole
@@ -1710,7 +1792,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 19 N-diode-9))
+   (net 28 N-diode-9))
   (pad
    2
    thru_hole
@@ -1746,7 +1828,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 20 N-diode-10))
+   (net 29 N-diode-10))
   (pad
    1
    thru_hole
@@ -1755,7 +1837,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 20 N-diode-10))
+   (net 29 N-diode-10))
   (pad
    2
    thru_hole
@@ -1819,7 +1901,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 20 N-diode-10))
+   (net 29 N-diode-10))
   (pad
    2
    thru_hole
@@ -1855,7 +1937,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 21 N-diode-11))
+   (net 30 N-diode-11))
   (pad
    1
    thru_hole
@@ -1864,7 +1946,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 21 N-diode-11))
+   (net 30 N-diode-11))
   (pad
    2
    thru_hole
@@ -1928,7 +2010,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 21 N-diode-11))
+   (net 30 N-diode-11))
   (pad
    2
    thru_hole
@@ -1964,7 +2046,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 22 N-diode-12))
+   (net 31 N-diode-12))
   (pad
    1
    thru_hole
@@ -1973,7 +2055,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 22 N-diode-12))
+   (net 31 N-diode-12))
   (pad
    2
    thru_hole
@@ -2037,7 +2119,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 22 N-diode-12))
+   (net 31 N-diode-12))
   (pad
    2
    thru_hole
@@ -2073,7 +2155,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 23 N-diode-13))
+   (net 32 N-diode-13))
   (pad
    1
    thru_hole
@@ -2082,7 +2164,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 23 N-diode-13))
+   (net 32 N-diode-13))
   (pad
    2
    thru_hole
@@ -2146,7 +2228,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 23 N-diode-13))
+   (net 32 N-diode-13))
   (pad
    2
    thru_hole
@@ -2182,7 +2264,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 24 N-diode-14))
+   (net 33 N-diode-14))
   (pad
    1
    thru_hole
@@ -2191,7 +2273,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 24 N-diode-14))
+   (net 33 N-diode-14))
   (pad
    2
    thru_hole
@@ -2255,7 +2337,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 24 N-diode-14))
+   (net 33 N-diode-14))
   (pad
    2
    thru_hole
@@ -2291,7 +2373,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 25 N-diode-15))
+   (net 34 N-diode-15))
   (pad
    1
    thru_hole
@@ -2300,7 +2382,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 25 N-diode-15))
+   (net 34 N-diode-15))
   (pad
    2
    thru_hole
@@ -2364,7 +2446,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 25 N-diode-15))
+   (net 34 N-diode-15))
   (pad
    2
    thru_hole
@@ -2400,7 +2482,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 26 N-diode-16))
+   (net 35 N-diode-16))
   (pad
    1
    thru_hole
@@ -2409,7 +2491,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 26 N-diode-16))
+   (net 35 N-diode-16))
   (pad
    2
    thru_hole
@@ -2473,7 +2555,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 26 N-diode-16))
+   (net 35 N-diode-16))
   (pad
    2
    thru_hole
@@ -2509,7 +2591,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 27 N-diode-17))
+   (net 36 N-diode-17))
   (pad
    1
    thru_hole
@@ -2518,7 +2600,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 27 N-diode-17))
+   (net 36 N-diode-17))
   (pad
    2
    thru_hole
@@ -2582,7 +2664,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 27 N-diode-17))
+   (net 36 N-diode-17))
   (pad
    2
    thru_hole
@@ -2618,7 +2700,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 28 N-diode-18))
+   (net 37 N-diode-18))
   (pad
    1
    thru_hole
@@ -2627,7 +2709,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 28 N-diode-18))
+   (net 37 N-diode-18))
   (pad
    2
    thru_hole
@@ -2691,7 +2773,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 28 N-diode-18))
+   (net 37 N-diode-18))
   (pad
    2
    thru_hole
@@ -2727,7 +2809,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 29 N-diode-19))
+   (net 38 N-diode-19))
   (pad
    1
    thru_hole
@@ -2736,7 +2818,7 @@
    (size 2.286 2.286)
    (drill 1.4986)
    (layers *.Cu *.SilkS *.Mask)
-   (net 29 N-diode-19))
+   (net 38 N-diode-19))
   (pad
    2
    thru_hole
@@ -2800,7 +2882,7 @@
    (size 1.6 1.6)
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
-   (net 29 N-diode-19))
+   (net 38 N-diode-19))
   (pad
    2
    thru_hole
@@ -2810,7 +2892,6 @@
    (drill 1)
    (layers *.Cu *.Mask F.SilkS)
    (net 4 N-row-3)))
-  (segment (start 118.58 39.77) (end 118.58 39.8652) (width 0.2032) (layer Back) (net 0))
   (segment (start 46.1 60.65) (end 65.1 60.65) (width 0.2032) (layer Front) (net 1))
   (segment (start 66.23137 60.65) (end 84.1 60.65) (width 0.2032) (layer Front) (net 1))
   (segment (start 65.1 60.65) (end 66.23137 60.65) (width 0.2032) (layer Front) (net 1))
@@ -2883,6 +2964,13 @@
   (segment (start 34.29 73.61) (end 34.29 88.8) (width 0.2032) (layer Back) (net 5))
   (segment (start 34.29 107.8) (end 35.56 109.07) (width 0.2032) (layer Back) (net 5))
   (segment (start 34.29 92.61) (end 34.29 107.8) (width 0.2032) (layer Back) (net 5))
+  (segment (start 110.020201 40.709799) (end 110.96 39.77) (width 0.2032) (layer Back) (net 5))
+  (segment (start 103.23 47.5) (end 110.020201 40.709799) (width 0.2032) (layer Back) (net 5))
+  (segment (start 35.56 52.07) (end 40.13 47.5) (width 0.2032) (layer Back) (net 5))
+  (segment (start 40.13 47.5) (end 103.23 47.5) (width 0.2032) (layer Back) (net 5))
+  (segment (start 34.417001 111.482999) (end 34.29 111.61) (width 0.2032) (layer Front) (net 5))
+  (segment (start 34.417001 110.212999) (end 34.417001 111.482999) (width 0.2032) (layer Front) (net 5))
+  (segment (start 35.56 109.07) (end 34.417001 110.212999) (width 0.2032) (layer Front) (net 5))
   (segment (start 53.417001 54.482999) (end 53.29 54.61) (width 0.2032) (layer Front) (net 6))
   (segment (start 53.417001 53.212999) (end 53.417001 54.482999) (width 0.2032) (layer Front) (net 6))
   (segment (start 54.56 52.07) (end 53.417001 53.212999) (width 0.2032) (layer Front) (net 6))
@@ -2899,6 +2987,12 @@
   (segment (start 53.29 73.61) (end 53.29 88.8) (width 0.2032) (layer Back) (net 6))
   (segment (start 53.29 107.8) (end 54.56 109.07) (width 0.2032) (layer Back) (net 6))
   (segment (start 53.29 92.61) (end 53.29 107.8) (width 0.2032) (layer Back) (net 6))
+  (segment (start 109.68442 43.58558) (end 112.560201 40.709799) (width 0.2032) (layer Back) (net 6))
+  (segment (start 112.560201 40.709799) (end 113.5 39.77) (width 0.2032) (layer Back) (net 6))
+  (segment (start 58.672789 47.957211) (end 103.419382 47.957211) (width 0.2032) (layer Back) (net 6))
+  (segment (start 54.56 52.07) (end 58.672789 47.957211) (width 0.2032) (layer Back) (net 6))
+  (segment (start 107.791012 43.58558) (end 109.68442 43.58558) (width 0.2032) (layer Back) (net 6))
+  (segment (start 103.419382 47.957211) (end 107.791012 43.58558) (width 0.2032) (layer Back) (net 6))
   (segment (start 72.29 53.34) (end 72.29 54.61) (width 0.2032) (layer Front) (net 7))
   (segment (start 73.56 52.07) (end 72.29 53.34) (width 0.2032) (layer Front) (net 7))
   (segment (start 72.29 72.34) (end 72.29 73.61) (width 0.2032) (layer Front) (net 7))
@@ -2913,6 +3007,12 @@
   (segment (start 72.29 73.61) (end 72.29 88.8) (width 0.2032) (layer Back) (net 7))
   (segment (start 72.29 107.8) (end 73.56 109.07) (width 0.2032) (layer Back) (net 7))
   (segment (start 72.29 92.61) (end 72.29 107.8) (width 0.2032) (layer Back) (net 7))
+  (segment (start 73.56 52.07) (end 77.215578 48.414422) (width 0.2032) (layer Back) (net 7))
+  (segment (start 111.76721 44.04279) (end 115.100201 40.709799) (width 0.2032) (layer Back) (net 7))
+  (segment (start 107.980395 44.042791) (end 111.76721 44.04279) (width 0.2032) (layer Back) (net 7))
+  (segment (start 103.608764 48.414422) (end 107.980395 44.042791) (width 0.2032) (layer Back) (net 7))
+  (segment (start 115.100201 40.709799) (end 116.04 39.77) (width 0.2032) (layer Back) (net 7))
+  (segment (start 77.215578 48.414422) (end 103.608764 48.414422) (width 0.2032) (layer Back) (net 7))
   (segment (start 91.29 53.34) (end 91.29 54.61) (width 0.2032) (layer Front) (net 8))
   (segment (start 92.56 52.07) (end 91.29 53.34) (width 0.2032) (layer Front) (net 8))
   (segment (start 91.29 72.34) (end 91.29 73.61) (width 0.2032) (layer Front) (net 8))
@@ -2927,6 +3027,12 @@
   (segment (start 91.29 73.61) (end 91.29 88.8) (width 0.2032) (layer Back) (net 8))
   (segment (start 91.29 69.8) (end 92.56 71.07) (width 0.2032) (layer Back) (net 8))
   (segment (start 91.29 54.61) (end 91.29 69.8) (width 0.2032) (layer Back) (net 8))
+  (segment (start 117.640201 40.709799) (end 118.58 39.77) (width 0.2032) (layer Back) (net 8))
+  (segment (start 103.798146 48.871633) (end 108.169778 44.5) (width 0.2032) (layer Back) (net 8))
+  (segment (start 95.758367 48.871633) (end 103.798146 48.871633) (width 0.2032) (layer Back) (net 8))
+  (segment (start 113.85 44.5) (end 117.640201 40.709799) (width 0.2032) (layer Back) (net 8))
+  (segment (start 108.169778 44.5) (end 113.85 44.5) (width 0.2032) (layer Back) (net 8))
+  (segment (start 92.56 52.07) (end 95.758367 48.871633) (width 0.2032) (layer Back) (net 8))
   (segment (start 110.29 53.34) (end 110.29 54.61) (width 0.2032) (layer Front) (net 9))
   (segment (start 111.56 52.07) (end 110.29 53.34) (width 0.2032) (layer Front) (net 9))
   (segment (start 110.29 72.34) (end 110.29 73.61) (width 0.2032) (layer Front) (net 9))
