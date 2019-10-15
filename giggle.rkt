@@ -8,7 +8,7 @@
 (define main-cols 4)
 (define main-rows 3)
 
-(define is-staggered true)
+(define is-staggered false)
 
 (define column-offset (if is-staggered '(10 5 0 5 10) '(9 9 9 9 9)))
 
@@ -320,5 +320,5 @@
                  (curry read-string 999999)) op)
       (display ")" op))))
 
-(write-placement side-board "giggle-side.kicad_pcb" "header-side.rktd" "traces-side.rktd")
+(write-placement side-board (if is-staggered "giggle-side-staggered.kicad_pcb" "giggle-side-ortho.kicad_pcb" ) "header-side.rktd" (if is-staggered "traces-side-staggered.rktd" "traces-side-ortho.rktd"))
 (write-placement main-board "giggle-main.kicad_pcb" "header-main.rktd" "traces-main.rktd")
