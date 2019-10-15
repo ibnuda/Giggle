@@ -258,6 +258,15 @@
 (define side-board
   (apply append nets
          (list (net-class nets))
+         (list (connector-shrouded 40 38.5 270 "J1" "CONN_05X2SHD" `(net 1 N-row-0)
+                                   `(net 8 N-col-3)
+                                   `(net 2 N-row-1)
+                                   `(net 7 N-col-2)
+                                   `(net 3 N-row-2)
+                                   `(net 6 N-col-1)
+                                   `(net 4 N-row-3)
+                                   `(net 5 N-col-0)
+                                   `(net 9 N-col-4)))
          (list (connector-shrouded 113.5 38.5 270 "J2" "CONN_05X2SHD" `(net 1 N-row-0)
                                    `(net 8 N-col-3)
                                    `(net 2 N-row-1)

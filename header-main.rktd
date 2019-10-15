@@ -90,3 +90,11 @@
       (scaleselection 1)
       (outputdirectory "gigglegbr/"))
   )
+
+  (gr_text "giggle giggle giggle" (at 105 52) (layer Front)
+    (effects (font (size 2.032 1.524) (thickness 0.3048)))
+  )
+
+  (gr_text "giggle giggle giggle" (at 45 52) (layer Front)
+    (effects (font (size 2.032 1.524) (thickness 0.3048)))
+  )
