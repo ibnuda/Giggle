@@ -88,7 +88,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "gigglegbr/"))
+      (outputdirectory "giggle-side-gbr/"))
   )
 
   (gr_text "giggle giggle giggle giggle giggle giggle" (at 78 37) (layer Front)
