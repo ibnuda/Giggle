@@ -8,6 +8,10 @@
 (define main-cols 4)
 (define main-rows 3)
 
+(define is-staggered true)
+
+(define column-offset (if is-staggered '(10 5 0 5 10) '(9 9 9 9 9)))
+
 (define (switch-module x y rotation label net-pos net-neg)
   `(module MX_FLIP (layer Front) (tedit 4FD81CDD) (tstamp 543EF801)
      (at ,x ,y ,rotation)
@@ -52,26 +56,27 @@
      (fp_line (start -15.24 7.62) (end 15.9 7.62) (layer F.SilkS) (width 0.381))
      (fp_line (start 15.9 7.62) (end 15.9 -7.62) (layer F.SilkS) (width 0.381))
      (fp_line (start 15.9 -7.62) (end -15.24 -7.62) (layer F.SilkS) (width 0.381))
-     (pad B5  thru_hole circle (at  13.97 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad B4  thru_hole circle (at  11.43 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad E6  thru_hole circle (at   8.89 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad D7  thru_hole circle (at   6.35 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad C6  thru_hole circle (at   3.81 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad D4  thru_hole circle (at   1.27 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad D0  thru_hole circle (at  -1.27 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad D1  thru_hole circle (at  -3.81 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
+     (pad B5  thru_hole circle (at  13.97 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net  4 N-row-3))
+     (pad B4  thru_hole circle (at  11.43 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net  3 N-row-2))
+     (pad E6  thru_hole circle (at   8.89 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 11 N-col-6))
+     (pad D7  thru_hole circle (at   6.35 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 12 N-col-7))
+     (pad C6  thru_hole circle (at   3.81 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 13 N-col-8))
+     (pad D4  thru_hole circle (at   1.27 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 17 N-col-12))
+     (pad D0  thru_hole circle (at  -1.27 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 16 N-col-11) )
+     (pad D1  thru_hole circle (at  -3.81 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 15 N-col-10))
      (pad GND thru_hole circle (at  -6.35 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
      (pad GND thru_hole circle (at  -8.89 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad RX1 thru_hole circle (at -11.43 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad TX0 thru_hole rect   (at -13.97 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
-     (pad B6  thru_hole circle (at  13.97  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad B2  thru_hole circle (at  11.43  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad B3  thru_hole circle (at   8.89  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad B1  thru_hole circle (at   6.35  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad F7  thru_hole circle (at   3.81  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad F6  thru_hole circle (at   1.27  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad F5  thru_hole circle (at  -1.27  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
-     (pad F4  thru_hole circle (at  -3.81  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask)  )
+     (pad RX1 thru_hole circle (at -11.43 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 14 N-col-9))
+     (pad TX0 thru_hole rect   (at -13.97 -7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 18 N-col-13))
+
+     (pad B6  thru_hole circle (at  13.97  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net  1 N-row-0))
+     (pad B2  thru_hole circle (at  11.43  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net  2 N-row-1))
+     (pad B3  thru_hole circle (at   8.89  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net  9 N-col-4))
+     (pad B1  thru_hole circle (at   6.35  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net  5 N-col-0))
+     (pad F7  thru_hole circle (at   3.81  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net  6 N-col-1))
+     (pad F6  thru_hole circle (at   1.27  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net  7 N-col-2))
+     (pad F5  thru_hole circle (at  -1.27  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net  8 N-col-3))
+     (pad F4  thru_hole circle (at  -3.81  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask) (net 10 N-col-5))
      (pad VCC thru_hole circle (at  -6.35  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
      (pad RST thru_hole circle (at  -8.89  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
      (pad GND thru_hole circle (at -11.43  7.62 270) (size 1.7526 1.7526) (drill 1.0922) (layers *.Cu *.SilkS *.Mask))
@@ -208,9 +213,9 @@
           (for/list ([n nets])
             (list 'add_net (last n)))))
 
-(define (switch row col x-pad y-pad col-pad)
+(define (switch row col x-pad y-pad is-main col-pad)
   (let* ([x (+ x-pad (* col spacing))]
-         [y (+ y-pad (* row spacing))]
+         [y (+ y-pad (* row spacing) (if is-main 0 (list-ref column-offset col)))]
          [label (format "sw~a:~a" col row)]
          [rotation 0]
          [diode (+ row (* col 4))]
@@ -218,9 +223,9 @@
          [column-net `(net ,(+ col-pad 5 col) ,(string->symbol (format "N-col-~s" (+ col-pad col))))])
     (switch-module x y rotation label diode-net column-net)))
 
-(define (diode row col x-pad y-pad)
+(define (diode row col x-pad y-pad is-main)
   (let* ([x (+ x-pad (* col spacing))]
-         [y (+ y-pad (* row spacing))]
+         [y (+ y-pad (* row spacing) (if is-main 0 (list-ref column-offset col)))]
          [label (format "d~a:~a" col row)]
          [rotation 0]
          [diode (+ row (* col 4))]
@@ -232,13 +237,13 @@
   (for/list ([col (in-range side-cols)]
              #:when true
              [row (in-range side-rows)])
-    (list (switch row col 38.1 57.15 0) (diode row col 46.1 57.15))))
+    (list (switch row col 38.1 47.15 false 0) (diode row col 46.1 47.15 false))))
 
 (define main-switches+diodes
   (for/list ([col (in-range main-cols)]
              #:when true
              [row (in-range main-rows)])
-    (list (switch row col 47.6 76.15 side-cols) (diode row col 55.6 76.15))))
+    (list (switch row col 47.6 76.15 true side-cols) (diode row col 55.6 76.15 true))))
 
 (define straight-edge-cuts
   (for/list [(s '([122   28] [125  31] [27.5  31] [122   125]))
