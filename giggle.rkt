@@ -284,7 +284,7 @@
 
 (define main-board
   (apply append nets
-         (list (connector-shrouded 40 38.5 180 "J2" "CONN_05X2SHD"
+         (list (connector-shrouded 40 38.5 270 "J2" "CONN_05X2SHD"
                                    `(net 1 N-row-0)
                                    `(net 8 N-col-3)
                                    `(net 2 N-row-1)
@@ -294,7 +294,7 @@
                                    `(net 4 N-row-3)
                                    `(net 5 N-col-0)
                                    `(net 9 N-col-4)))
-         (list (connector-shrouded 113.5 38.5 0 "J1" "CONN_05X2SHD"
+         (list (connector-shrouded 113.5 38.5 270 "J1" "CONN_05X2SHD"
                                    `(net  1 N-row-0)
                                    `(net 17 N-col-12)
                                    `(net  2 N-row-1)
@@ -304,7 +304,7 @@
                                    `(net  4 N-row-3)
                                    `(net 14 N-col-9)
                                    `(net 18 N-col-13)))
-         (list (microcontroller-module 91 38.5 0))
+         (list (microcontroller-module 85 38.5 0))
          straight-edge-cuts
          arc-edge-cuts
          main-switches+diodes))
