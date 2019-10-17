@@ -21,6 +21,10 @@
      (fp_line (start  7 -7) (end  7  7) (layer F.SilkS) (width 0.381))
      (fp_line (start  7  7) (end -7  7) (layer F.SilkS) (width 0.381))
      (fp_line (start -7  7) (end -7 -7) (layer F.SilkS) (width 0.381))
+     (fp_line (start -9.5 -9.5) (end  9.5 -9.5) (layer Dwgs.User) (width 0.381))
+     (fp_line (start  9.5 -9.5) (end  9.5  9.5) (layer Dwgs.User) (width 0.381))
+     (fp_line (start  9.5  9.5) (end -9.5  9.5) (layer Dwgs.User) (width 0.381))
+     (fp_line (start -9.5  9.5) (end -9.5 -9.5) (layer Dwgs.User) (width 0.381))
      (pad 0 np_thru_hole circle (at 0 0) (size 3.9878 3.9878) (drill 3.9878)) ; switch hole, no copper
      (pad 0 np_thru_hole circle (at -5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper
      (pad 0 np_thru_hole circle (at 5.08 0) (size 1.7018 1.7018) (drill 1.7018)) ; board-mount hole, no copper
@@ -258,7 +262,7 @@
 (define side-board
   (apply append nets
          (list (net-class nets))
-         (list (connector-shrouded 35 47.15 270 "J1" "CONN_05X2SHD"
+         (list (connector-shrouded 40 38.5 270 "J1" "CONN_05X2SHD"
                                    `(net 1 N-row-0)
                                    `(net 8 N-col-3)
                                    `(net 2 N-row-1)
