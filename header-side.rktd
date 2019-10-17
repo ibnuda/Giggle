@@ -91,6 +91,6 @@
       (outputdirectory "giggle-side-gbr/"))
   )
 
-  (gr_text "giggle giggle giggle giggle giggle giggle" (at 78 37) (layer Front)
+  (gr_text "giggle giggle giggle giggle giggle giggle" (at 78 37) (layer F.SilkS)
     (effects (font (size 2.032 1.524) (thickness 0.3048)))
   )

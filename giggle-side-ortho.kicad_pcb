@@ -91,7 +91,7 @@
       (outputdirectory "giggle-side-gbr/"))
   )
 
-  (gr_text "giggle giggle giggle giggle giggle giggle" (at 78 37) (layer Front)
+  (gr_text "giggle giggle giggle giggle giggle giggle" (at 78 37) (layer F.SilkS)
     (effects (font (size 2.032 1.524) (thickness 0.3048)))
   )
 (net 0 "")
@@ -165,6 +165,10 @@
 (net 68 N-diode-49)
 (net 69 N-diode-50)
 (net 70 N-diode-51)
+(net 71 N-diode-52)
+(net 72 N-diode-53)
+(net 73 N-diode-54)
+(net 74 N-diode-55)
 (net_class
  Default
  "This is the default net class."
@@ -244,10 +248,14 @@
  (add_net N-diode-48)
  (add_net N-diode-49)
  (add_net N-diode-50)
- (add_net N-diode-51))
+ (add_net N-diode-51)
+ (add_net N-diode-52)
+ (add_net N-diode-53)
+ (add_net N-diode-54)
+ (add_net N-diode-55))
 (module connector-shrouded (layer F.Cu)
   (tedit 200000)
-  (at 40 38.5 270)
+  (at 35 47.15 270)
   (descr "PLATED THROUGH HOLE - 2X5 SHROUDED HEADER")
   (tags "PLATED THROUGH HOLE - 2X5 SHROUDED HEADER")
   (attr virtual)
